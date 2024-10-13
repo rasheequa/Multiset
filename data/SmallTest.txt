@@ -1,0 +1,17 @@
+Les collections de la bibliothèque standard Java proposent de nombreuses interfaces de conteneurs
+et plusieurs implantations de chaque interface. Dans ce TME, nous allons construire un nouveau
+type de collection : les multi-ensembles, MultiSet. Le prochain TME reprendra cette collection et
+nous proposera de développer des tests.
+Un multi-ensemble est une liste non-ordonnée d’éléments. Contrairement à un ensemble classique,
+un élément peut apparaître plusieurs fois dans un multi-ensemble, et il convient de se souvenir du
+nombre d’occurrences. Une application intéressante des multi-ensembles que nous allons explorer
+dans ce TME est le comptage de la fréquence d’apparition des mots dans un texte pour déterminer
+les mots les plus fréquents.
+Plusieurs implantations des multi-ensembles sont possibles. Une implantation naïve consisterait à
+utiliser une implantation de l’interface List (par exemple ArrayList), mais celles-ci ne possèdent
+pas une bonne complexité pour notre application (le comptage de mots). Nous allons à la place
+utiliser une implantation de l’interface Map, qui associe à chaque élément son nombre d’occurrences.
+Notez que nous ne pouvons pas utiliser Set, car il ne permet pas à un élément d’apparaître plusieurs
+fois.
+Notre multi-ensemble est polymorphe. Comme pour les collections Java, nous utilisons les types
+génériques. Nous écrirons donc MultiSet<T>.
